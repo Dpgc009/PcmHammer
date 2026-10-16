@@ -8,7 +8,7 @@ param
 if (($ReleaseNumber.Length -ne 4) -and -not $Preview)
 {
 	write-host You must provide a 4-digit release number, for example: 2.01
-	exit
+	exit 1
 }
 
 Remove-Item -Recurse Apps\PcmHammer\bin\debug -ErrorAction SilentlyContinue
